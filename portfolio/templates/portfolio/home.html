@@ -1,0 +1,340 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Curtis Haynes</title>
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{% static 'portfolio/jqueryui/jquery-ui.min.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/jqueryui/jquery-ui.min.css' %}">
+
+    <!--Bootstrap js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!--Font Awesome-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+
+    <!--Animate.css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+
+    <!--My CSS-->
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/index.css' %}">
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i|Roboto+Condensed:300,400i,700" rel="stylesheet">  
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="d-flex flex-row">
+            <div id="sidebar" class="position-fixed p-3 container-fluid">
+                <h3 class="mt-2" style="text-align: center; color: #F8E9A1;">Curtis Haynes</h3>
+                <div class="mt-4">
+                    <img src="{% static 'portfolio/img/pic2.png' %}" class="w-75 mx-auto d-block">
+                </div>
+                <hr class="mt-4" style="background-color: #F76C6C; width: 10em">
+                <div class="row p-3 mt-4">
+                    <a href="https://github.com/CCHaynes112" class="mx-auto"><i class="fab fa-github col-xs-3" style="font-size: 30px;"></i></a>
+                    <a href="#" class="mx-auto"><i class="fab fa-linkedin col-xs-3" style="font-size: 30px;"></i></a>
+                    <a href="#" class="mx-auto"><i class="fab fa-facebook col-xs-3" style="font-size: 30px;"></i></a>
+                    <a href="#" class="mx-auto"><i class="fab fa-instagram col-xs-3" style="font-size: 30px;"></i></a>
+                </div>
+                <div id="headerList" class="container-fluid list-group mt-5">
+                    <a class="list-group-item list-group-item-action" href="#aboutItem">About
+                        <span><i class="fas fa-user float-right" style="font-size: 20px;"></i></span>
+                    </a>
+                    <a class="list-group-item list-group-item-action" href="#portItem">Portfolio
+                        <span><i class="far fa-file-alt float-right" style="font-size: 20px;"></i></span>
+                    </a>
+                    <!--<a class="list-group-item list-group-item-action" href="#skillsItem">Experience
+                        <span><i class="fas fa-code float-right" style="font-size: 17px;"></i></span>
+                    </a>-->
+                    <a class="list-group-item list-group-item-action" href="#contactItem">Contact
+                        <span><i class="far fa-envelope float-right" style="font-size: 20px;"></i></span>
+                    </a>
+                </div>
+            </div>
+
+            <div id="content" class="container-fluid">
+                <div class="container-fluid scrollspy-example">
+                    <button id="sidebarBtn" class="btn m-2 position-fixed" style="z-index: 1;"><i class="fas fa-bars" style="font-size: 25px;"></i></button>
+                    <div class="container-fluid">
+                        <div id="aboutItem" class="container-fluid">
+                            <br>
+                            <h1 class="text-center mt-5" style="font-size: 10vh; font-weight: 700;">Curtis <span style="color: #F76C6C; font-weight: 300;">Haynes</span></h1>
+                            <hr class="hrUnderline mt-4">
+                            <h2 class="text-center" style="font-style: italic;">Web Developer <i class="fas fa-circle" style="font-size: 10px;"></i> Game Dev Hobbyist</h2>
+                            <div id="aboutMeButtons" class="row container-fluid mx-auto" style="margin-top: 10vh;">
+                                <div class="col-xs-4 mx-auto" style="font-size: 100px;">
+                                    <a id="aboutMeButton" href="#"><i class="fas fa-address-card"></i>
+                                    <h2 class="text-center">About Me</h2></a>                            
+                                </div>
+                                <div class="col-xs-4 mx-auto" style="font-size: 100px;">
+                                    <a id="educationButton" href="#"><i class="fas fa-graduation-cap"></i><h2 class="text-center">Education</h2></a>
+                                </div>
+                                <div class="col-xs-4 mx-auto" style="font-size: 100px;">
+                                    <a id="interestButton" href="#"><i class="fas fa-headphones"></i><h2 class="text-center">Interests</h2></a>
+                                </div>
+                            </div>
+
+                            <div id="aboutMeText" class="card text-center mt-5 mx-auto">
+                                <div class="card-header">
+                                    <h2 class="pt-3 font-weight-bold">About Me</h2>
+                                </div>
+                                <div class="card-body">
+                                    <p class="p-3">Computer Science has been an interest of mine since I was extremely young. Even at a young age I enjoyed taking apart computers and trying to teach myself how it all worked. It was a natural transition from that small hobby to trying to make a career out of computers, and programming specifically. I built this website as partly a way to teach myself some programming, as well as a place to show off my experience.</p>
+                                    <p>Feel free to scroll down and view some of my work, or shoot me a message, I should get back in a timely manner!</p>
+                                </div>
+                                <div class="card-footer">
+                                    <i class="fas fa-star" style="font-size: 30px;"></i>
+                                </div>
+                            </div>
+
+                            <div id="educationText" class="card text-center mt-5 mx-auto" style="display: none;">
+                                <div class="card-header">
+                                    <h2 class="pt-3 font-weight-bold">Education</h2>
+                                </div>
+                                <div class="card-body">
+                                    <p class="font-weight-bold">California Baptist University</p>
+                                    <p class="font-italic font-weight-light">Bachelor's of Science in Computer Information Technology (In Progress)</p>
+                                    <p class="font-weight-bold">Moreno Valley College</p>
+                                    <p class="font-italic font-weight-light">Associate of Math and Science</p>
+                                    <p class="font-italic font-weight-light">Associate of Humanities Philosophy and the Arts</p>
+                                </div>
+                                <div class="card-footer">
+                                    <i class="fas fa-star" style="font-size: 30px;"></i>
+                                </div>
+                            </div>
+
+                            <div id="interestText" class="card text-center mt-5 mx-auto" style="display: none;">
+                                <div class="card-header">
+                                    <h2 class="pt-3 font-weight-bold">Interests</h2>
+                                </div>
+                                <div class="card-body">
+                                    <p class="p-3">Below is a list of hobbies and interests I have in no particular order:</p>
+                                    <p>Traveling</p>
+                                    <p>Gaming (Video / tabletop)</p>
+                                    <p>Programming</p>
+                                    <p>Amateur game dev</p>
+                                    <p>Sculpting</p>
+                                    <p>Drums</p>
+                                </div>
+                                <div class="card-footer">
+                                    <i class="fas fa-star" style="font-size: 30px;"></i>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div id="portItem" class="container-fluid contentInfo">
+                            <br>
+                            <h2 class="text-center font-weight-bold" style="font-size: 7.5vh;">Portfolio</h2>
+                            <hr class="hrUnderline">
+                            <div class="container-fluid row mt-5 mx-auto">
+                                <div class="card col-xs-4 mx-auto portfolioCard" style="width: 50vh;">
+                                    <img class="card-img-top" src="{% static 'portfolio/img/brawlbay2.png' %}">
+                                    <div class="card-body">
+                                        <h2 class="font-weight-bold">Brawl Bay</h2>
+                                        <p>Website that tracks and displays all players statistics graphically. Uses the developer's API, Google Chart API, Twitter API.</p>
+                                        <a href="https://brawlbay.com/" class="btn btn-primary">Check it out</a>
+                                    </div>
+                                </div>
+                                <div class="card col-xs-4 mx-auto portfolioCard" style="width: 50vh;">
+                                    <img class="card-img-top" src="{% static 'portfolio/img/Matsuri2.png' %}">
+                                    <div class="card-body">
+                                        <h2 class="font-weight-bold">Matsuri</h2>
+                                        <p>Website made for a local Japanese cuisine restaurant. Made almost completely from a bootstrap template.</p>
+                                        <a href="#" class="btn btn-primary">Check it out</a>
+                                    </div>
+                                </div>
+                                <div class="card col-xs-4 mx-auto portfolioCard" style="width: 50vh;">
+                                    <img class="card-img-top" src="{% static 'portfolio/img/platformer.png' %}">
+                                    <div class="card-body">
+                                        <h2 class="font-weight-bold">Simple Platformer</h2>
+                                        <p>Just a very small platformer I made to teach myself some of the basics of unity.</p>
+                                        <a href="#" class="btn btn-primary">Check it out</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container-fluid row mt-5 mx-auto">
+                                <div class="card col-xs-4 mx-auto portfolioCard" style="width: 50vh;">
+                                    <img class="card-img-top" src="{% static 'portfolio/img/placeholder.png' %}">
+                                    <div class="card-body">
+                                        <h2 class="font-weight-bold">WIP</h2>
+                                        <p>Currently a WIP</p>
+                                        <a href="#" class="btn btn-primary">Check it out</a>
+                                    </div>
+                                </div>
+                                <!--<div class="card col-xs-4 mx-auto portfolioCard" style="width: 50vh;">
+                                    <img class="card-img-top" src="matsuri2.png">
+                                    <div class="card-body">
+                                        <h2 class="font-weight-bold">Matsuri</h2>
+                                        <p>Website made for a local Japanese cuisine restaurant. Made almost completely from a bootstrap template.</p>
+                                        <a href="#" class="btn btn-primary">Check it out</a>
+                                    </div>
+                                </div>
+                                <div class="card col-xs-4 mx-auto portfolioCard" style="width: 50vh;">
+                                    <img class="card-img-top" src="palceholder.png">
+                                    <div class="card-body">
+                                        <h2 class="font-weight-bold">WIP</h2>
+                                        <p>WIP</p>
+                                        <a href="#" class="btn btn-primary">Check it out</a>
+                                    </div>
+                                </div>-->
+                            </div>
+                        </div>
+
+                        <!--<div id="skillsItem" class="container-fluid contentInfo">
+                            <br>
+                            <h2 class="text-center" style="font-size: 7.5vh;">Experience</h2>
+                            <hr class="hrUnderline">
+
+                            <div class="row container-fluid mt-5 mx-auto">
+                                <div class="card col-xs-6 mx-auto" style="width: 75vh;">
+                                    <div class="card-header">
+                                        <h2 class="pt-3 font-weight-bold text-center">Confident</h2>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"><p>HTML</p></li>
+                                        <li class="list-group-item"><p>CSS</p></li>
+                                        <li class="list-group-item"><p>Javascript</p></li>
+                                        <li class="list-group-item"><p>C++</p></li>
+                                        <li class="list-group-item"><p>Python</p></li>
+                                    </ul>
+                                </div>
+                                <div class="card col-xs-6 mx-auto" style="width: 75vh;">
+                                    <div class="card-header">
+                                        <h2 class="pt-3 font-weight-bold text-center">Some Experience</h2>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"><p>MySQL</p></li>
+                                        <li class="list-group-item"><p>PHP</p></li>
+                                        <li class="list-group-item">
+                                            <p>Unity</p>
+                                            <p class="text-center">Click the icon to play a mini-game:</p>
+                                            <a href="#"><img src="unity.png" class="w-25 mx-auto d-block mx-auto"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>-->
+                        <div id="contactItem" class="container-fluid contentInfo">
+                            <br>
+                            <h2 class="text-center font-weight-bold" style="font-size: 7.5vh;">Contact</h2>
+                            <hr class="hrUnderline">
+                            <form id="contactForm" class="container-fluid w-75 card mt-5 mx-auto">
+                                <p class="text-center pt-4">Feel free to contact me if you have any questions, comments, concerns, etc. I would be more than happy to get back to you. I will get back to any messages sent to me in a timely manner.
+                                </p>
+                                <div class="form-group floating-label-form-group">
+                                    <label for="inputNameForm">Name:</label>
+                                    <input id="inputNameForm" class="form-control" placeholder="Your name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputEmailForm">*Email:</label>
+                                    <input id="inputEmailForm" class="form-control" placeholder="Example@Email.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputMessageForm">*Message:</label>
+                                    <textarea id="inputMessageForm" class="form-control" placeholder=". . ."></textarea>
+                                </div>
+                                <div class="pb-4">
+                                    <button class="btn btn-primary px-4" type="submit">Submit</button>
+                                </div>
+                                
+                            </form>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="container-fluid">
+                            <!--<p>Copyright Curtis Haynes, 2018</p>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        flag = 1;
+
+        $(document).ready(function(){
+
+            $('body').scrollspy({ target: '#headerList' })
+            //sidebar Collapse
+            $("#sidebarBtn").click(function(){
+                if(flag == 1)
+                {
+                    $("#sidebar").toggle("slide", 750);
+                    $("#content").animate({'margin-left': '0'}, 750);
+                    flag = 0;
+                }
+                    
+                else if(flag == 0)
+                {
+                    $("#sidebar").toggle("slide", 750);
+                    $("#content").animate({'margin-left': '14em'}, 750);
+                    flag = 1;
+                }
+            });
+
+            //sidebar Scrollspy
+            $("#headerList a").on('click', function(e) {
+                var hash = this.hash;
+
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 750, function() {
+                    window.location.hash = hash;
+                });
+            });
+
+            //About me buttons
+            $("#aboutMeButtons a").on('click', function(e) {
+                var id = $(this).attr('id');
+
+                if(id == "aboutMeButton")
+                {
+                    $("#educationButton, #interestButton").attr("style", "color: black;");
+                    $("#aboutMeButton").attr("style", "color: #F8E9A1;");
+
+                    $("#educationText, #interestText").hide();
+                    $("#aboutMeText").show("fade", 750);
+                }
+
+                else if(id == "educationButton")
+                {
+                    $("#aboutMeButton, #interestButton").attr("style", "color: black;");
+                    $("#educationButton").attr("style", "color: #F8E9A1;");
+
+                    $("#aboutMeText, #interestText").hide();
+                    $("#educationText").show("fade", 750);
+                }
+
+                else if(id == "interestButton")
+                {
+                    $("#aboutMeButton, #educationButton").attr("style", "color: black;");
+                    $("#interestButton").attr("style", "color: #F8E9A1;");
+
+                    $("#aboutMeText, #educationText").hide();
+                    $("#interestText").show("fade", 750);
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
