@@ -46,10 +46,11 @@ p {
 
 #sidebar {
 	background-color: #24305E;
-	width: 15em;
 	height: 100vh;
+	width: 15em;
 	color: white;
 	z-index: 1;
+	overflow-x: hidden;
 }
 
 #sidebar img {
@@ -60,7 +61,8 @@ p {
 #content {
 	background-color: #4F89A8;
 	margin-left: 14em;
-
+	height: 100%;
+	overflow-x: hidden;
 }
 
 #aboutMeButtons a {
@@ -80,7 +82,7 @@ p {
 	border: none;
 	background-color: #F76C6C;
 	height: 1vh;
-	width: 25vw;
+	width: 45vh;
 	box-shadow: 2px 3px 8px #F76C6C;
 }
 

@@ -5,7 +5,7 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Curtis Haynes</title>
 
@@ -143,24 +143,24 @@
                             <h2 class="text-center font-weight-bold" style="font-size: 7.5vh;">Portfolio</h2>
                             <hr class="hrUnderline">
                             <div class="container-fluid row mt-5 mx-auto">
-                                <div class="card col-xs-4 mx-auto portfolioCard" style="width: 50vh;">
-                                    <img class="card-img-top" src="{% static 'portfolio/img/brawlbay2.png' %}">
+                                <div class="card col-sm-4 mx-auto portfolioCard" style="width: 50vh;">
+                                    <img class="card-img-top mt-3" src="{% static 'portfolio/img/brawlbay2.png' %}">
                                     <div class="card-body">
                                         <h2 class="font-weight-bold">Brawl Bay</h2>
                                         <p>Website that tracks and displays all players statistics graphically. Uses the developer's API, Google Chart API, Twitter API.</p>
                                         <a href="https://brawlbay.com/" class="btn btn-primary">Check it out</a>
                                     </div>
                                 </div>
-                                <div class="card col-xs-4 mx-auto portfolioCard" style="width: 50vh;">
-                                    <img class="card-img-top" src="{% static 'portfolio/img/Matsuri2.png' %}">
+                                <div class="card col-sm-4 mx-auto portfolioCard" style="width: 50vh;">
+                                    <img class="card-img-top mt-3" src="{% static 'portfolio/img/Matsuri2.png' %}">
                                     <div class="card-body">
                                         <h2 class="font-weight-bold">Matsuri</h2>
                                         <p>Website made for a local Japanese cuisine restaurant. Made almost completely from a bootstrap template.</p>
                                         <a href="#" class="btn btn-primary">Check it out</a>
                                     </div>
                                 </div>
-                                <div class="card col-xs-4 mx-auto portfolioCard" style="width: 50vh;">
-                                    <img class="card-img-top" src="{% static 'portfolio/img/platformer.png' %}">
+                                <div class="card col-sm-4 mx-auto portfolioCard" style="width: 50vh;">
+                                    <img class="card-img-top mt-3" src="{% static 'portfolio/img/platformer.png' %}">
                                     <div class="card-body">
                                         <h2 class="font-weight-bold">Simple Platformer</h2>
                                         <p>Just a very small platformer I made to teach myself some of the basics of unity.</p>
@@ -169,9 +169,9 @@
                                 </div>
                             </div>
 
-                            <div class="container-fluid row mt-5 mx-auto">
-                                <div class="card col-xs-4 mx-auto portfolioCard" style="width: 50vh;">
-                                    <img class="card-img-top" src="{% static 'portfolio/img/placeholder.png' %}">
+                            <div class="container-fluid row mx-auto">
+                                <div class="card col-sm-4 mx-auto portfolioCard" style="width: 50vh;">
+                                    <img class="card-img-top mt-3" src="{% static 'portfolio/img/placeholder.png' %}">
                                     <div class="card-body">
                                         <h2 class="font-weight-bold">WIP</h2>
                                         <p>Currently a WIP</p>
@@ -276,14 +276,14 @@
             $("#sidebarBtn").click(function(){
                 if(flag == 1)
                 {
-                    $("#sidebar").toggle("slide", 750);
+                    $("#sidebar").hide("slide", 750);
                     $("#content").animate({'margin-left': '0'}, 750);
                     flag = 0;
                 }
                     
                 else if(flag == 0)
                 {
-                    $("#sidebar").toggle("slide", 750);
+                    $("#sidebar").show("slide", 750);
                     $("#content").animate({'margin-left': '14em'}, 750);
                     flag = 1;
                 }

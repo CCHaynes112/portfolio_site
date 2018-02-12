@@ -14,11 +14,11 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 import sys
 
-sys.path.insert(0, '/home/django/django_project')
-from secret_keys import secret_key
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+#sys.path.insert(0, '/home/django/django_project')
+sys.path.insert(0, BASE_DIR)
+from secret_keys import secret_key
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
