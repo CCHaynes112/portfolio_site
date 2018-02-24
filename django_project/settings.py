@@ -29,7 +29,7 @@ SECRET_KEY = secret_key
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['curtishaynes.net', 'www.curtishaynes.net']
+ALLOWED_HOSTS = ['localhost', 'curtishaynes.net', 'www.curtishaynes.net']
 
 
 # Application definition
@@ -100,10 +100,11 @@ USE_L10N = True
 
 USE_TZ = True
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
-
+STATIC_ROOT = BASE_DIR + 'django_project/static'
 STATIC_URL = '/static/'
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 # Allow Django from all hosts. This snippet is installed from

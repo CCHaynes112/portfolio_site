@@ -1,0 +1,101 @@
+/*	F8E9A1
+	F76C6C
+	A8D0E6
+	24305E
+	374785
+
+	HJTVO67UWUB8FO4V6TZZ6TEDN6B54
+*/
+
+body {
+	position: relative;
+}
+
+h1 {
+	font-family: 'Roboto Condensed', sans-serif;
+
+    line-height: 51px;
+    font-size: 46px;
+    text-transform: uppercase;
+    margin: 0 0 23px 0;
+}
+
+h2 {
+	font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    margin: 0 0 23px 0;
+}
+
+p {
+    font-family: 'Cabin', sans-serif;
+    font-size: 15px;
+    line-height: 23px;
+    margin: 0 0 23px 0;
+}
+
+#sidebar .row a {
+	color: #F8E9A1;
+	transition: color 0.3s;
+}
+
+#sidebar .row a:hover {
+	color: black;
+}
+
+#sidebar {
+	background-color: #24305E;
+	height: 100vh;
+	width: 15em;
+	color: white;
+	z-index: 1;
+	overflow-x: hidden;
+}
+
+#sidebar img {
+	border: 2px solid #A8D0E6;
+	border-radius: 50%;
+}
+
+#content {
+	background-color: #4F89A8;
+	margin-left: 14em;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+#aboutMeButtons a {
+	color: black;
+	transition: color 0.3s;
+}
+
+#content a:hover {
+	color: #F8E9A1;
+}
+
+.contentInfo {
+	margin-top: 20vh;
+}
+
+.hrUnderline {
+	border: none;
+	background-color: #F76C6C;
+	height: 1vh;
+	width: 45vh;
+	box-shadow: 2px 3px 8px #F76C6C;
+}
+
+.portfolioCard {
+
+	transition: filter 0.5s, box-shadow 0.5s;
+}
+
+.portfolioCard:hover {
+	filter: brightness(65%);
+	box-shadow: 0 0 30px #9ecaed;
+}	
+
+.btn {
+	box-shadow: 1px 1px 5px black;
+}

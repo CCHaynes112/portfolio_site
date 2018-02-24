@@ -245,25 +245,14 @@
                             <br>
                             <h2 class="text-center font-weight-bold" style="font-size: 7.5vh;">Contact</h2>
                             <hr class="hrUnderline">
-                            <form id="contactForm" class="container-fluid w-75 card mt-5 mx-auto">
+                            <form id="EmailForm" class="container-fluid w-75 card mt-5 mx-auto p-5" method="post">
                                 <p class="text-center pt-4">Feel free to contact me if you have any questions, comments, concerns, etc. I would be more than happy to get back to you. I will get back to any messages sent to me in a timely manner.
                                 </p>
-                                <div class="form-group floating-label-form-group">
-                                    <label for="inputNameForm">Name:</label>
-                                    <input id="inputNameForm" class="form-control" placeholder="Your name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputEmailForm">*Email:</label>
-                                    <input id="inputEmailForm" class="form-control" placeholder="Example@Email.com">
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputMessageForm">*Message:</label>
-                                    <textarea id="inputMessageForm" class="form-control" placeholder=". . ."></textarea>
-                                </div>
-                                <div class="pb-4">
-                                    <button class="btn btn-primary px-4" type="submit">Submit</button>
-                                </div>
-                                
+                                {% csrf_token %}
+                                {{ form }}    
+                                <button class="btn btn-primary px-4 mt-3" type="submit">Submit</button>
+                                <div class="alert alert-danger text-center collapse" role=alert>Error: Email was not sent.</div>
+                                <div class="alert alert-success text-center collapse" role=alert>Success! Email sent!</div>
                             </form>
                         </div>
                         <br>
@@ -330,8 +319,7 @@
     		</div>
     	</div>
     </div>
-
-
+    
     <script type="text/javascript">
         flag = 1;
 		var isMobile = false; //initiate as false
@@ -406,6 +394,36 @@
                     $("#aboutMeText, #educationText").hide();
                     $("#interestText").show("fade", 750);
                 }
+            });
+        });
+
+        $("#EmailForm").submit(function(e) {
+            e.preventDefault();
+            $.ajax({
+                url: '/sendMail/',
+                type: 'post',
+                data: {
+                    csrfmiddlewaretoken: '{{ csrf_token }}',
+                    'name': $(this.name).val(),
+                    'email': $(this.email).val(),
+                    'body': $(this.body).val(),
+                },
+                error: function(data) {
+                    console.log("Ajax Error.");
+                    $('.alert-danger').show()
+                },
+
+                success: function(data) {
+                    if(data == 'pass') {
+                        console.log("Email sent");
+                        $('.alert-success').show();
+                    }
+
+                    else {
+                        console.log("Email not sent")
+                        $('.alert-danger').show();
+                    }
+                },
             });
         });
 
