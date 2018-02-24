@@ -18,7 +18,9 @@ def send_mail_func(request):
 		email = form.cleaned_data['email']
 		body = form.cleaned_data['body']
 
-		recipient = ['cchaynes1122@gmail.com']
+		body = "From: " + email + "\n\n" + body
+
+		recipient = ['CCHaynes1122@gmail.com']
 
 		send_mail(
 			'Website Mail: From: ' + name,

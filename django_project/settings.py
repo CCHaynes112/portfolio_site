@@ -18,7 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 #sys.path.insert(0, '/home/django/django_project')
 sys.path.insert(0, BASE_DIR)
-from secret_keys import secret_key
+from secret_keys import *
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -27,7 +27,7 @@ from secret_keys import secret_key
 SECRET_KEY = secret_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', 'curtishaynes.net', 'www.curtishaynes.net']
 
@@ -101,6 +101,11 @@ USE_L10N = True
 USE_TZ = True
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'CCHaynes1122@gmail.com'
+EMAIL_HOST_PASSWORD = gmail_pw
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
