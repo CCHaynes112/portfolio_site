@@ -1,3 +1,4 @@
 secret_keys.py
 secret_keys.pyc
 *.pyc
+*.swp
