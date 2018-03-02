@@ -4,4 +4,5 @@ from . import views
 urlpatterns = [
 	url(r'^$', views.index, name='index'),
 	url(r'^sendMail', views.send_mail_func, name='sendMail'),
+	url(r'^platformGame', views.platform_game, name='platformGame'),
 ]

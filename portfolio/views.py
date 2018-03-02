@@ -30,3 +30,6 @@ def send_mail_func(request):
 			)
 		return HttpResponse("pass")
 	return HttpResponse("fail")
+
+def platform_game(request):
+	return render(request, 'portfolio/platformer.html')
